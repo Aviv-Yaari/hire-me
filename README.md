@@ -1,1 +1,1 @@
-A simple website for work purposes.
+hire-me-nu.vercel.app
