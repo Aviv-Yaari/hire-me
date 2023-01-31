@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-    margin: 1em;
+    margin: 0 1em;
     @media (${mobileBreakpoint}) {
       font-size: 16px;
     }
