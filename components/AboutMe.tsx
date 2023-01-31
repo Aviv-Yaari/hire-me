@@ -15,8 +15,8 @@ export default function AboutMe() {
     <Section>
       <h2>About me</h2>
       <p>Currently working for <b>Imperva</b> as a <b>Fullstack developer</b>.</p>
-      <p>Received the <b>“MVP”</b> <a href="https://drive.google.com/file/d/1Fv9LUQyqrrl682j4J8uMTmNMsRzFhpBB/view?usp=share_link">award in 2022</a>  for significant contribution to Imperva&apos;s frontend guild.</p>
-      <p>Prior to that, I finished the <a href="https://www.coding-academy.org/pdf/syllabus.pdf">Coding Academy bootcamp</a> with a <b>scholarship for excellence</b>. </p>
+      <p>Received the <b>“MVP”</b> <a target='_blank' href="https://drive.google.com/file/d/1Fv9LUQyqrrl682j4J8uMTmNMsRzFhpBB/view?usp=share_link" rel="noreferrer">award in 2022</a>  for significant contribution to Imperva&apos;s frontend guild.</p>
+      <p>Prior to that, I finished the <a target='_blank' href="https://www.coding-academy.org/pdf/syllabus.pdf" rel="noreferrer">Coding Academy bootcamp</a> with a <b>scholarship for excellence</b>. </p>
       <p>I&apos;m an autodidact and motivated team player with a passion for technology.</p>
       <p>Looking for my next challenge as a <b>Fullstack / Frontend Developer</b>.</p>
       <p>PS - Other than that, I enjoy traveling, reading books, cooking, watching football and playing the guitar. OK, and making memes.</p>
