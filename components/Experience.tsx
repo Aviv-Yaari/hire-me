@@ -11,7 +11,7 @@ export default function Experience() {
   return (
     <Section>
       <Actions>
-        <PrimaryButton onClick={() => window.open("https://drive.google.com/file/d/1MLUKvMlx77lTVCuu1qTUPoe_6dympmil/view?usp=sharing")}>PDF</PrimaryButton>
+        <PrimaryButton onClick={() => window.open("https://drive.google.com/file/d/1MLUKvMlx77lTVCuu1qTUPoe_6dympmil/view?usp=sharing")}>Get PDF</PrimaryButton>
       </Actions>
 
       <h2>Experience</h2>
