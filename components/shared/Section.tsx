@@ -1,4 +1,4 @@
-import LazyLoad from "@/hooks/useLazyLoad";
+import LazyLoad from "@/components/shared/LazyLoad";
 import { fadeInAnimation } from "@/styles/animations";
 import { mobileBreakpoint } from "@/styles/theme";
 import { useRef } from "react";

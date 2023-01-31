@@ -4,7 +4,7 @@ import Section from "./shared/Section";
 import githubImage from '../public/github-mark.svg'
 import linkedinImage from '../public/linkedin-mark.svg'
 import profileImage from '../public/profile.jpeg'
-import LazyLoad from "@/hooks/useLazyLoad";
+import LazyLoad from "@/components/shared/LazyLoad";
 import { fadeInAnimation } from "@/styles/animations";
 import { useRef } from "react";
 import { mobileBreakpoint } from "@/styles/theme";

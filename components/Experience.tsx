@@ -3,7 +3,7 @@ import { Tag } from "./shared/general.styled";
 import Section from "./shared/Section";
 import styled from "styled-components";
 import { useRef } from "react";
-import LazyLoad from "@/hooks/useLazyLoad";
+import LazyLoad from "@/components/shared/LazyLoad";
 import { fadeInAnimation } from "@/styles/animations";
 
 export default function Experience() {

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Props extends React.PropsWithChildren {
     parentRef: React.RefObject<HTMLElement>;
