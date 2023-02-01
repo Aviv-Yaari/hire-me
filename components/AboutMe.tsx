@@ -4,11 +4,9 @@ import Section from "./shared/Section";
 import githubImage from '../public/github-mark.svg'
 import linkedinImage from '../public/linkedin-mark.svg'
 import profileImage from '../public/profile.jpeg'
-import { useRef } from "react";
 import { mobileBreakpoint } from "@/styles/theme";
 
 export default function AboutMe() {
-  const imageRef = useRef<HTMLDivElement>(null);
   return (
     <Section>
       <h2>About me</h2>
@@ -24,7 +22,7 @@ export default function AboutMe() {
         <a target='_blank' href="https://github.com/Aviv-Yaari" rel="noreferrer"><Image src={githubImage} alt="github" width={16}/><span>Github</span></a>
         <a target='_blank' href="https://www.linkedin.com/in/aviv-yaari" rel="noreferrer"><Image src={linkedinImage} alt="linkedin" width={16}/><span>Linkedin</span></a>
       </ContactInfo>
-      <ImageContainer ref={imageRef}>
+      <ImageContainer>
         <Image src={profileImage} alt="Profile image" />
       </ImageContainer>
     </Section>
@@ -34,11 +32,6 @@ export default function AboutMe() {
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
-  min-height: 200px;
-
-  @media (${mobileBreakpoint}) {
-    min-height: 400px;
-  }
 
   img {
     border-radius: 6px;
