@@ -10,7 +10,7 @@ interface Props {
 export default function Introduction({ onLearnMore }: Props) {
   return (
     <Section>
-      <Title>Hi! my name is Aviv,<br></br>and I can center a div in CSS.</Title>
+      <Title>Hi! My name is Aviv,<br></br>and I can center a div in CSS.</Title>
       <Actions>
         <PrimaryButton onClick={() => window.open('mailto:avivyar@gmail.com')}>Hire me</PrimaryButton>
         <SecondaryButton onClick={onLearnMore}>Learn more</SecondaryButton>
