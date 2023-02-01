@@ -22,9 +22,9 @@ export default function AboutMe() {
       <p>PS - Other than that, I enjoy traveling, reading books, cooking, watching football and playing the guitar. OK, and making memes.</p>
       <ContactInfo>
         <span>☎️ +972-52-8953410</span>
-        <span>✉️ <a target='_blank' href="mailto:avivyar@gmail.com" rel="noreferrer">avivyar@gmail.com</a></span>
-        <span><Image src={githubImage} alt="github" width={16}/><a target='_blank' href="https://github.com/Aviv-Yaari" rel="noreferrer">Github</a></span>
-        <span><Image src={linkedinImage} alt="github" width={16}/><a target='_blank' href="https://www.linkedin.com/in/aviv-yaari-8a797a197/" rel="noreferrer">Linkedin</a></span>
+        <a target='_blank' href="mailto:avivyar@gmail.com" rel="noreferrer">✉️ <span>avivyar@gmail.com</span></a>
+        <a target='_blank' href="https://github.com/Aviv-Yaari" rel="noreferrer"><Image src={githubImage} alt="github" width={16}/><span>Github</span></a>
+        <a target='_blank' href="https://www.linkedin.com/in/aviv-yaari" rel="noreferrer"><Image src={linkedinImage} alt="linkedin" width={16}/><span>Linkedin</span></a>
       </ContactInfo>
       <ImageContainer ref={imageRef}>
         <LazyLoad parentRef={imageRef}>
@@ -65,11 +65,16 @@ const ContactInfo = styled.div`
     flex-direction: row;
   }
   
-  span {
+  > span, > a {
     border: 1px dashed black;
     padding: 10px;
     display: flex;
     align-items: center;
     gap: 5px;
+    text-decoration: none;
+
+    &:hover span {
+      text-decoration: underline; 
+    }
   }
 `
