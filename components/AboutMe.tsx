@@ -4,7 +4,6 @@ import Section from "./shared/Section";
 import githubImage from '../public/github-mark.svg'
 import linkedinImage from '../public/linkedin-mark.svg'
 import profileImage from '../public/profile.jpeg'
-import LazyLoad from "@/components/shared/LazyLoad";
 import { fadeInAnimation } from "@/styles/animations";
 import { useRef } from "react";
 import { mobileBreakpoint } from "@/styles/theme";
@@ -27,9 +26,7 @@ export default function AboutMe() {
         <a target='_blank' href="https://www.linkedin.com/in/aviv-yaari" rel="noreferrer"><Image src={linkedinImage} alt="linkedin" width={16}/><span>Linkedin</span></a>
       </ContactInfo>
       <ImageContainer ref={imageRef}>
-        <LazyLoad parentRef={imageRef}>
-          <Image src={profileImage} alt="Profile image" />
-        </LazyLoad>
+        <Image src={profileImage} alt="Profile image" />
       </ImageContainer>
     </Section>
   )

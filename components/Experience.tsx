@@ -7,7 +7,7 @@ import LazyLoad from "@/components/shared/LazyLoad";
 import { fadeInAnimation } from "@/styles/animations";
 
 export default function Experience() {
-  const impervaRef = useRef<HTMLDivElement>(null);
+  const otherJobsRef = useRef<HTMLDivElement>(null);
   return (
     <Section>
       <Actions>
@@ -36,8 +36,8 @@ export default function Experience() {
       </div>
 
       {/* Yes */}
-      <SAPJobs ref={impervaRef}>        
-        <LazyLoad parentRef={impervaRef} threshold={1}>
+      <SAPJobs ref={otherJobsRef}>        
+        <LazyLoad parentRef={otherJobsRef} threshold={1}>
           <div>
             <h3>2020: SAP Consultant - Yes</h3>
             <ul>
