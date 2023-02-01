@@ -4,7 +4,6 @@ import Section from "./shared/Section";
 import githubImage from '../public/github-mark.svg'
 import linkedinImage from '../public/linkedin-mark.svg'
 import profileImage from '../public/profile.jpeg'
-import { fadeInAnimation } from "@/styles/animations";
 import { useRef } from "react";
 import { mobileBreakpoint } from "@/styles/theme";
 
@@ -42,7 +41,6 @@ const ImageContainer = styled.div`
   }
 
   img {
-    animation: ${fadeInAnimation} ease 750ms;
     border-radius: 6px;
     width: 100%;
     max-width: 600px;
