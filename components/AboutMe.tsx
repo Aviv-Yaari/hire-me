@@ -58,6 +58,7 @@ const ContactInfo = styled.div`
     padding: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     text-decoration: none;
 
