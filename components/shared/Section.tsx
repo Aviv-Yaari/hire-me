@@ -6,16 +6,15 @@ import styled, { css } from "styled-components"
 
 interface Props {
   children?: React.ReactNode;
-  minHeight?: string;
 }
 
-export default function Section({ minHeight, children }: Props) {
+export default function Section({ children }: Props) {
   const ref = useRef<HTMLElement>(null);
 
   return (
     <SectionContainer ref={ref}>
       <LazyLoad parentRef={ref}>
-        <SectionBox minHeight={minHeight}>{children}</SectionBox>
+        <SectionBox>{children}</SectionBox>
       </LazyLoad>
     </SectionContainer>
   )
@@ -28,7 +27,7 @@ export const SectionContainer = styled.section`
   justify-content: center;
 `
 
-export const SectionBox = styled.article<{ minHeight: Props['minHeight'] }>`
+export const SectionBox = styled.article`
   animation: ${fadeInAnimation} ease 750ms;
   background: ${({theme}) => theme.background.secondary};
   border-radius: 10px;
@@ -38,7 +37,6 @@ export const SectionBox = styled.article<{ minHeight: Props['minHeight'] }>`
   position: relative;
   margin-block: 1em;
   padding: 1em;
-  ${({minHeight}) => minHeight && css`min-height: ${minHeight};`}  
 
   @media (${mobileBreakpoint}) {
     padding: 4em;

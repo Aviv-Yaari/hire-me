@@ -1,16 +1,15 @@
 import Image from 'next/image';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import expandMore from '../../public/expand-more.svg'
 import { openAnimation } from '@/styles/animations';
 
 interface Props extends React.PropsWithChildren {
     title: string;
-    open?: HTMLDetailsElement['open'];
 }
 
-export default function Accordion({ title, open, children }: Props) {
+export default function Accordion({ title, children }: Props) {
   return (
-    <Container open={open}>
+    <Container>
       <Summary>
         <Image src={expandMore} alt='Expand' width={24} />
         <h3>{title}</h3>
