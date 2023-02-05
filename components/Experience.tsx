@@ -6,9 +6,8 @@ import { useRef } from "react";
 import Accordion from "./shared/Accordion";
 
 export default function Experience() {
-  const otherJobsRef = useRef<HTMLDivElement>(null);
   return (
-    <Section>
+    <Section minHeight='600px'>
       <Actions>
         <PrimaryButton onClick={() => window.open("https://drive.google.com/file/d/1MLUKvMlx77lTVCuu1qTUPoe_6dympmil/view?usp=sharing")}>Get PDF</PrimaryButton>
       </Actions>

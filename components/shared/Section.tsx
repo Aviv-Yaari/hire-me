@@ -2,15 +2,20 @@ import LazyLoad from "@/components/shared/LazyLoad";
 import { fadeInAnimation } from "@/styles/animations";
 import { mobileBreakpoint } from "@/styles/theme";
 import { useRef } from "react";
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
-export default function Section({ children }: { children: React.ReactNode }) {
+interface Props {
+  children?: React.ReactNode;
+  minHeight?: string;
+}
+
+export default function Section({ minHeight, children }: Props) {
   const ref = useRef<HTMLElement>(null);
 
   return (
     <SectionContainer ref={ref}>
       <LazyLoad parentRef={ref}>
-        <SectionBox>{children}</SectionBox>
+        <SectionBox minHeight={minHeight}>{children}</SectionBox>
       </LazyLoad>
     </SectionContainer>
   )
@@ -23,7 +28,7 @@ export const SectionContainer = styled.section`
   justify-content: center;
 `
 
-export const SectionBox = styled.article`
+export const SectionBox = styled.article<{ minHeight: Props['minHeight'] }>`
   animation: ${fadeInAnimation} ease 750ms;
   background: ${({theme}) => theme.background.secondary};
   border-radius: 10px;
@@ -33,7 +38,8 @@ export const SectionBox = styled.article`
   position: relative;
   margin-block: 1em;
   padding: 1em;
-  
+  ${({minHeight}) => minHeight && css`min-height: ${minHeight};`}  
+
   @media (${mobileBreakpoint}) {
     padding: 4em;
   }
