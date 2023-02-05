@@ -3,8 +3,7 @@ import { Tag } from "./shared/general.styled";
 import Section from "./shared/Section";
 import styled from "styled-components";
 import { useRef } from "react";
-import LazyLoad from "@/components/shared/LazyLoad";
-import { fadeInAnimation } from "@/styles/animations";
+import Accordion from "./shared/Accordion";
 
 export default function Experience() {
   const otherJobsRef = useRef<HTMLDivElement>(null);
@@ -17,8 +16,7 @@ export default function Experience() {
       <h2>Experience</h2>
 
       {/* Imperva */}
-      <div>
-        <h3>2021 - Present: Fullstack Developer - Imperva</h3>
+      <Accordion title="2021 - Present: Fullstack Developer - Imperva" open>
         <ul>
           <li>
             Created the infrastructure for <Tag>Typescript</Tag>-based frontend microservices in the organization, driven by a <Tag>Jenkins</Tag> job, and led its implementation.
@@ -33,47 +31,34 @@ export default function Experience() {
             Delivered new APIs and backend features using <Tag>microservices architecture</Tag>, <Tag>Java Spring Boot</Tag> and <Tag>MySQL</Tag> database; Wrote component tests and used tools such as: <Tag>Grafana</Tag>, <Tag>Coralogix</Tag>, <Tag>Docker</Tag>, <Tag>Kubernetes</Tag>, <Tag>Datadog</Tag>.
           </li>
         </ul>
-      </div>
+      </Accordion>
 
       {/* Yes */}
-      <SAPJobs ref={otherJobsRef}>        
-        <LazyLoad parentRef={otherJobsRef} threshold={1}>
-          <div>
-            <h3>2020: SAP Consultant - Yes</h3>
-            <ul>
-              <li>
-                Sole responsible for SAP HR implementation.
-              </li>
-              <li>
-                Led new developments from end to end - from understanding the client&apos;s demand and writing specification documents to working with the development teams, testing and debugging, production deployment, bug fixing and support.
-              </li>
-            </ul>
-          </div>
+      <Accordion title="2020: SAP Consultant - Yes">
+        <ul>
+          <li>
+            Sole responsible for SAP HR implementation.
+          </li>
+          <li>
+            Led new developments from end to end - from understanding the client&apos;s demand and writing specification documents to working with the development teams, testing and debugging, production deployment, bug fixing and support.
+          </li>
+        </ul>
+      </Accordion>
 
-          {/* IDF */}
-          <div>
-            <h3>2015 - 2019: SAP Consultant - IDF, “Mazpen” Unit</h3>
-            <ul>
-              <li>
-                Significant contribution to <a target="_blank" href="https://www.pc.co.il/news/240446/" rel="noreferrer">&quot;Yesodot&quot;</a> project, from Blueprint to Go Live & Support.
-              </li>
-              <li>
-                Experience in writing specification documents for a large number of new developments, Extensive QA and Debugging.
-              </li>
-            </ul>
-          </div>
-        </LazyLoad>
-      </SAPJobs>
+      {/* IDF */}
+      <Accordion title="2015 - 2019: SAP Consultant - IDF, “Mazpen” Unit">
+        <ul>
+          <li>
+            Significant contribution to <a target="_blank" href="https://www.pc.co.il/news/240446/" rel="noreferrer">&quot;Yesodot&quot;</a> project, from Blueprint to Go Live & Support.
+          </li>
+          <li>
+            Experience in writing specification documents for a large number of new developments, Extensive QA and Debugging.
+          </li>
+        </ul>
+      </Accordion>
     </Section>
   )
 };
-
-const SAPJobs = styled.div`
-  min-height: 20em;
-  div {
-    animation: ${fadeInAnimation} 3s;
-  }
-`
 
 const Actions = styled.div`
   display: flex;
