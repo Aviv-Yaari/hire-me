@@ -1,4 +1,7 @@
+import Image from 'next/image';
 import styled from 'styled-components';
+import expandMore from '../../public/expand-more.svg'
+import { openAnimation } from '@/styles/animations';
 
 interface Props extends React.PropsWithChildren {
     title: string;
@@ -8,30 +11,22 @@ interface Props extends React.PropsWithChildren {
 export default function Accordion({ title, open, children }: Props) {
   return (
     <Container open={open}>
-      <Summary><h3>{title}</h3></Summary>
+      <Summary>
+        <Image src={expandMore} alt='Expand' width={24} />
+        <h3>{title}</h3>
+      </Summary>
       {children}
     </Container>
   )
 }
 
 const Container = styled.details`
-  &[open] > summary::before {
+  &[open] > summary img {
     transform: rotate(180deg);
   }
 
-  /* Open animation: */
-
   >:nth-child(2) {
-    transition: transform 200ms, opacity 200ms;
-  }
-
-  &[open] > :nth-child(2) {
-    opacity: 1;
-  }
-
-  &:not([open]) > :nth-child(2) {
-    opacity: 0;
-    transform: translateY(-0.5em);
+    animation: ${openAnimation} 400ms;
   }
 `
 
@@ -40,13 +35,8 @@ const Summary = styled.summary`
   align-items: center;
   cursor: pointer;
 
-  ::before {
+  img {
     transition: transform 200ms;
-    background-image: url('/expand-more.svg');
-    background-size: 1.75em;
-    width: 1.75em;
-    height: 1.75em;
-    content: "";
   }
 
   :hover {

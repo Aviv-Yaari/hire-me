@@ -1,10 +1,14 @@
 import { keyframes } from "styled-components";
 
 export const fadeInAnimation = keyframes`
-  0% {
+  from {
       opacity: 0;
   }
-  100% {
-      opacity: 1;
-   }
+`
+
+export const openAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-0.5em);
+  }
 `
