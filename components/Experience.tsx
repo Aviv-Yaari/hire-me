@@ -23,7 +23,7 @@ export default function Experience() {
             Led many frontend key features using <Tag>React</Tag> and <Tag>Redux</Tag>; Wrote tests using <Tag>Jest</Tag>.
           </li>
           <li>
-            Contributed to frontend guild projects - used and configured popular frontend libraries and tools including: <Tag>Eslint</Tag>, <Tag>Styled-Components</Tag>, <Tag>Storybook</Tag>, <Tag>Vite</Tag>.
+            Contributed to frontend guild projects - used and configured popular frontend libraries and tools including: <Tag>Eslint</Tag>, <Tag>Styled-Components</Tag>, <Tag>Storybook</Tag>.
           </li>
           <li>
             Delivered new APIs and backend features using <Tag>microservices architecture</Tag>, <Tag>Java Spring Boot</Tag> and <Tag>MySQL</Tag> database; Wrote component tests and used tools such as: <Tag>Grafana</Tag>, <Tag>Coralogix</Tag>, <Tag>Docker</Tag>, <Tag>Kubernetes</Tag>, <Tag>Datadog</Tag>.
